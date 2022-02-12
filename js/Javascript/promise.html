@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function fnGetUserDetail(){
+
+            fetch("https:///jsonplaceholder.typicode.com/users")
+            .then(res) => {
+                if(res.ok){
+                    return (res.ok)
+                    {
+                        return res.json();
+                    } else {
+                        //var error = new Error("something wrong at serverside");
+                        alert("something went wrong");
+                    }
+                    })
+                    .then(actualData) => {
+                    console.log(actualData);
+                   })
+                   .catct(errormsg) => {
+                       console.log(errormsg);
+                
+                  });
+        }
+        async function fnGetUserDetail(){
+            var res = await fetch("https://jsonplaceholder.typicode.com/posts");
+            if(res.ok){
+            var actualData = await res.json();
+            console.log(actualData);
+            } else {
+                alert("error while getting the data");
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <button onclick="fnGetUserDetail()">User Data</button>
+        <button>Post Data</button>
+
+    </body>
+    </html>

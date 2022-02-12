@@ -1,0 +1,11 @@
+{
+    "name": "Sasmita",
+    "age": 40,
+    "isAdmin": false,
+    "address": ["LIC","Banjara hill","Hyderabad"],
+    "myObj": {
+        "name":"Namrata",
+        "age":35,
+        "address": ["Patia","Blue Heaven","Bhubaneswar"]
+    }
+}

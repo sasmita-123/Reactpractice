@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* div{
+            width: 500px;
+            box-shadow: 0 0 10px black;
+            margin: 100px auto;
+            padding: 50px;
+            text-align: center;
+        }*/
+    </style>
+    <Script>
+            function showDocument(){
+                     //console.log(document);
+               var h2Ref = document.getElementById("i1"); //reference of h2 element
+               var bodyRef = document.getElementById("b1");//reference of body element
+               var buttonRef = document.querySelector('button');
+               var inputRef = document.querySelector("#input1")
+
+
+
+                h2Ref.innerText = "Hello JavaScript";
+                h2Ref.style.color = "red";
+                
+                bodyRef.style.backgroundColor = "lightgreen";
+                
+                buttonRef.style.backgroundColor = "yellow";
+                buttonRef.style.padding = "15px";
+                buttonRef.style.color = "red";
+                buttonRef.style.border = "none";
+                buttonRef.style.borderRadius = "50px";
+
+                inputRef.placeholder = "Enter some text";
+                inputRef.value = "INDIA IS THE BEST";
+            }
+    </Script>
+    </head>
+    <body id="b1">
+        <div>
+            <h2 id="i1">Welcome to HTML and CSS</h2>
+            Enter Text: <input type="text" placeholder="Name" id="input1" value="INDIA"/>
+        </div>
+        <div>
+            <p>Manipulating DOM Elements in JavaScript. Now that you've learnt how to select and style HTML DOM elements. ...
+                Adding New Elements to DOM. You can explicitly create new element in an HTML document, using the document.createElement () method.
+                Getting or Setting HTML Contents to DOM. ...
+                Removing Existing Elements from DOM. ...
+                Replacing Existing Elements in DOM. .
+            </p>
+            <button onclick="showDocument()">Show Document</button>
+        <div>
+            
+        </body>
+</html>

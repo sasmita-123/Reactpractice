@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Student's Report</title>
+    <script type="text/css">
+        .screen-body-item left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </script>
+    
+    </head>
+    <body>
+        <div class="app-form">
+            <div class="app-form-group">
+                <input type="text" class="app-form-control" placeholder="WEB PROGRAMMING" ID="wd">
+            </div>
+            <div class="app-form-group">
+                <input type="text" class="app-form-control" placeholder="MATHS" ID="maths">
+            </div>
+            <div class="app-form-group">
+                <input type="text" class="app-form-control" placeholder="COMPUTER" ID="comp">
+            </div>
+            <div class="app-form-group">
+                <input type="text" class="app-form-control" placeholder="PHYSICS" ID="phy">
+            </div>
+            <div>
+                <input type="button" name="" value="showPercentage" class="app-form-button" onclick = "calcy()">
+            </div>
+            <div class="app-form-group showdata">
+                <p id="showData"> </p>
+            </div>
+        </div>
+
+        </div>
+        <script>
+            const calcy = () =>{
+                let wd = document.getElementById('wd').value;
+                let maths = document.getElementById('maths').value;
+                let comp = document.getElementById('comp').value;
+                let phy = document.getElementById('phy').value;
+                let totalGrades = parseInt(wd + maths + comp + phy);
+                alert(totalGrades); 
+                
+                let perc =parseInt( (totalGrades/400) * 100);
+                alert(perc);
+
+                debugger;
+
+                if(perc <= 100 && perc >=80){
+                    grades = 'A';
+                }else if(perc <= 79 && perc >= 60){
+                    grades = 'B';
+                }else if(perc <=59 &&perc >= 40){
+                grades = 'C';
+                }else{
+                    grades = 'F';
+                }
+
+                if(perc >= 39.5){
+                    document.getElementById('showData').innerHTML = `Out of 400 your total is ${totalGrades} 
+                    and percentage is ${perc}%.<br>
+                    Your grade is ${grades}. Your grade is Pass.`
+
+                }
+                    else{
+                    document.getElementById('showData').innerHTML = `Out of 400 your total is ${totalGrades} 
+                    and percentage is ${perc}%.<br>
+                    Your grade is ${grades}. Your grade is Fail.`
+
+                    }
+                
+                }
+                
+
+            
+
+
+        </script>
+    </body>
+</html>
